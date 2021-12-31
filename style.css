@@ -1,3 +1,27 @@
+:root{
+  --primary: hsl(160deg, 100%, 30%);
+  --secondary-light: hsl(45deg, 100%, 50%);
+  --secondary-dark: hsl(45deg, 100%, 40%);
+  --black: hsl(0deg, 0%, 0%);
+  --very-dark: hsl(0deg, 0%, 10%);
+  --dark: hsl(0deg, 0%, 30%);
+  --medium: hsl(0deg, 0%, 40%);
+  --light: hsl(0deg, 0%, 60%);
+  --white: hsl(0deg, 0%, 100%);
+  --s-unit-1: 8px;
+  --s-unit-2: calc(var(--s-unit-1) * 2);
+  --s-unit-3: calc(var(--s-unit-1) * 3);
+  --s-unit-4: calc(var(--s-unit-1) * 4);
+  --s-unit-6: calc(var(--s-unit-1) * 6);
+  --s-unit-8: calc(var(--s-unit-1) * 8);
+  --s-unit-12: calc(var(--s-unit-1) * 12);
+  --s-unit-16: calc(var(--s-unit-1) * 16);
+  --f-unit-1: 1rem;
+  --f-unit-2: 1.25rem;
+  --f-unit-3: 1.5rem;
+  --f-unit-4: 2rem;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
@@ -8,5 +32,75 @@ body {
   margin: 0;
   padding: 0;
 }
+h1, h2, p{
+  line-height: var(--f-unit-3);
+}
+
+
 
 /* Add styles here! */
+
+.max-width-wrapper{
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* HEADER START */
+header{
+  border-bottom: var(--medium) var(--s-unit-1) solid;
+}
+
+.intro-chunk{
+  padding-top: var(--s-unit-12);
+  padding-bottom: var(--s-unit-6);
+  padding-left: var(--s-unit-3);
+  padding-right: var(--s-unit-3);
+
+}
+
+.intro-chunk h1{
+  padding-bottom: var(--s-unit-6);
+  font-size: var(--f-unit-4);
+}
+.intro-chunk p{
+  max-width: 320px;
+  color: var(--very-dark);
+}
+.intro-chunk strong{
+  color: var(--primary);
+}
+/* HEADER-END */
+
+/* MAIN START */
+main{
+  background-color: var(--light);
+}
+main .max-width-wrapper{
+  padding-top: var(--s-unit-8);
+  padding-bottom: var(--s-unit-8);
+}
+.indented-heading{
+  margin: 0;
+  margin-left: calc(var(--s-unit-1) * -1);
+  margin-right: var(--s-unit-2);
+  padding-left: var(--s-unit-4);
+  padding-right: var(--s-unit-3);
+  padding-top: var(--s-unit-3);
+  padding-bottom: var(--s-unit-3);
+  /* padding-right: var(--s-unit-3);
+  padding-top: var(--s-unit-3); */
+  background-color: var(--secondary-light);
+  border-bottom: var(--secondary-dark) var(--s-unit-1) solid;
+  width: fit-content;
+}
+.card{
+  padding-top: var(--s-unit-1);
+  max-width: 742px;
+  background-color: var(--white);
+  border-bottom: var(--medium) var(--s-unit-1) solid;
+}
+.card p{
+  padding-left: var(--s-unit-3);
+  padding-right: var(--s-unit-3);
+}
